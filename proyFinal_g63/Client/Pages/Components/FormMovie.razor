@@ -1,0 +1,43 @@
+<EditForm Model = "Movie" OnValidSubmit="OnValidSubmit"> 
+    
+    <div>
+        <h3>FormMovie</h3>
+    </div>
+
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    <div class="row" >
+            <div class="col mb-3">
+
+               
+
+                <InputText cl ass="form-control" @bind-Value="@Movie.Name" placeholder="Movie Name" ></InputText>
+
+                <ValidationMessage For="@(()=>Movie.Name)"></ValidationMessage>
+                
+
+            </div>
+
+            
+    </div>
+
+    <div class="row">
+
+        <div class="col mb-3">
+  
+            <button type="submit" class="btn btn-info">Guardar Pelicula</button>
+
+        </div>
+
+
+    </div>
+
+</EditForm>
+
+@code{
+
+    [Parameter] public Movie Movie{get;set;}
+    [Parameter] public EventCallback OnValidSubmit{get;set;}
+
+
+
+}

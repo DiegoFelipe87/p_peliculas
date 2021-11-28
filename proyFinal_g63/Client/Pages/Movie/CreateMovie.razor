@@ -1,0 +1,17 @@
+@page "/movies/create"
+@using proyFinal_g63.Client.Pages.Components
+
+
+<FormMovie Movie = "Movie" OnValidSubmit = "Create"></FormMovie>
+
+@code{
+
+    private Movie Movie = new Movie();
+
+    
+    void Create(){
+        Console.WriteLine(Movie.Name);
+
+    }
+}
+

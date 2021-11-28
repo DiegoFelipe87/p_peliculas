@@ -1,0 +1,26 @@
+@page "/movies"
+@using proyFinal_g63.Client.Services
+@using proyFinal_g63.Client.Pages.Components
+@inject IServiceMovie movie
+
+<h6>ListMovie</h6>
+<a href="movies/create" class="btn btn-info btn-sm mb-3">Create Movie</a>
+
+<CardsMovie Movies = "Movies"> </CardsMovie>
+
+@code{
+
+    private List<Movie> Movies;
+
+        //Necesito  que me cargue la información que tiene en el servicio
+           
+       
+        protected override void OnInitialized()
+        {
+           Movies = movie.GetMovies();
+        }
+
+
+
+
+}

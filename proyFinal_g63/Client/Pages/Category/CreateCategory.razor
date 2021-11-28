@@ -1,0 +1,17 @@
+@page "/categories/create"
+@using proyFinal_g63.Client.Pages.Components
+
+
+<FormCategory Category = "Category" OnValidSubmit = "Create"></FormCategory>
+
+@code{
+
+    private Category Category = new Category();
+
+    
+    void Create(){
+        Console.WriteLine(Category.Name);
+
+    }
+}
+
